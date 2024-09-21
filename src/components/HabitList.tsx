@@ -41,7 +41,7 @@ const HabitList = () => {
 			{habits.map((habit) => {
 				return (
 					<Paper key={habit.id} elevation={2} sx={{ p: 2 }}>
-						<Grid container alignItems="center">
+						<Grid container alignItems="center" justifyContent="space-between">
 							<Grid>
 								<Typography variant="h6">{habit.name}</Typography>
 								<Typography
@@ -76,6 +76,7 @@ const HabitList = () => {
 							</Typography>
 						</Box>
 						<LinearProgress
+							color="success"
 							variant="determinate"
 							value={(getStreak(habit) / 30) * 100}
 							sx={{ mt: 1 }}
